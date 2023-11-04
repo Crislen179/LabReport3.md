@@ -32,5 +32,24 @@ An input that doesn't induce a failure is shown below:
     assertArrayEquals(new int[]{ 3 }, input1);
 	}
 ```
+<br />
+
+The screenshot of the symptom as the output of running the test by using JUnit is shown below:
+<img src="part1.png" alt="drawing" width="600"/> <br />
+
+The bug program we chose for this lab report after change and fix the bug is shown below:
+
+```
+  static void reverseInPlace(int[] arr) {
+    int temp;
+    for(int i = 0; i < arr.length/2; i += 1) {
+      temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  }
+```
+
+The output showing the test cases are passed by running JUnit is shown in the screenshot:
 
 
