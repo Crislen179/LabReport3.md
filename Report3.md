@@ -141,7 +141,21 @@ technical/911report/chapter-13.4.txt
 technical/911report/chapter-13.5.txt
 ```
 
-We tried -mmin n command option for 
+We tried -mmin n command option for search files or directories was last modified less than, more than, or exactly n minutes ago. <br />
+We can use find -type d -mmin -100 to search all the directories that were modified less than 100 minutes ago. Let's say I add a new folder name Hello in technical/, and I type find technical/ -type d -mmin -100, the terminal will output the directories that I modified less than 100 minutes ago. The output is show below:
+```
+$ find technical/ -type d -mmin -100
+technical/
+technical/Hello
+```
+
+We can use find -type f -mmin -100 to search all the files that were modified less than 100 minutes ago. Let's say I add a new line Hello inside technical/911report/chapter-12.txt, and I type find technical/ -type f -mmin -100, the terminal will output the files that I modified less than 100 minutes ago. The output is shown below:
+```
+$ find technical/ -type f -mmin -100
+technical/911report/chapter-12.txt
+```
+
+
 
 
 
