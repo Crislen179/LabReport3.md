@@ -59,7 +59,8 @@ To fix this bug, we declare an int variable temp to store the index in the array
 ### Part 2 - Researching Commands
 By searching "find command-line options" in Google, we find a website that talks about the find command-line option and the URL of the website is 
 ```https://man7.org/linux/man-pages/man1/find.1.html```
-We try -type command option for the find command. -type command can be used for searching and locating files and directories within a specified directory hierarchy.
+<br />
+We try -type command option for the find command. -type command can be used for searching and locating files and directories within a specified directory hierarchy.<br />
 We can use -type d to search all the directories inside a directory. For example, if I type find technical/ -type d, the terminal will output all the directories inside technical. The output is shown below:
 ```
 $ find technical/ -type d
@@ -97,7 +98,7 @@ technical/911report/chapter-9.txt
 technical/911report/preface.txt
 ```
 <br />
-We tried -size command option for the find command. -size command can be used to search for files based on their size.
+We tried -size command option for the find command. -size command can be used to search for files based on their size.<br />
 We can use -size +300k to search all the files that have a size larger than 300k inside a directory. For example, if I type find technical/ -size +300k, the terminal will output all the files that have a size larger than 300k inside technical/. The output is shown below:
 
 ```
@@ -117,6 +118,31 @@ If we use -size +1M to search a file and nothing is output, that means the file 
 $ find technical/911report/chapter-1.txt -size +1M
 
 ```
+<br />
+
+We tried -name command option for the find command. -name command can be used to search for files or directories based on their names. <br />
+We can use -type d -name "d*" to search all the directories that have a name start with the letter d inside a directory. For example, if I type find technical/ -type d -name "9*", the terminal will output the directories that have a name start with 9. The output is shown below:
+```
+$ find technical/  -name "9*"
+technical/911report
+```
+
+We can use -type f -name "chapter-1*" to search all the files that have a name start with chapter-1 inside a directory. For example, if I type find technical/ -type f -name "chapter-1*", the terminal will output the files that have a name start with chapter-1. The output is shown below:
+```
+$ find technical/ -type f -name "chapter-1*"
+technical/911report/chapter-1.txt
+technical/911report/chapter-10.txt
+technical/911report/chapter-11.txt
+technical/911report/chapter-12.txt
+technical/911report/chapter-13.1.txt
+technical/911report/chapter-13.2.txt
+technical/911report/chapter-13.3.txt
+technical/911report/chapter-13.4.txt
+technical/911report/chapter-13.5.txt
+```
+
+We tried -mmin n command option for 
+
 
 
 
